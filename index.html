@@ -4,31 +4,36 @@
 
 <head>
 <meta charset="utf-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  h1, a {
+    text-align: center; /* 让 h1 和 a 标签中的文字居中 */
+    display: block; /* 确保 a 标签可以居中 */
+    margin: 0 auto; /* 让 h1 和 a 居中显示 */
+  }
+</style>
 </head>
 <body>
-<h1 style="font-size:100px;">作業</h1>
 
-<a href="https://www.youtube.com/watch?v=V2AS7MwObp4"><img src="https://play-lh.googleusercontent.com/Y5KL71adt-8xXSo6shZzW09fM0gXaYT2YjEMzd_0Tab9Qk07nW25U_DQPN0H5A4BJ90l=w240-h480-rw" alt="HTML tutorial" style="width:350px;height:350px;"></a>
+<h1 style="font-size:100px;">虎科統計資料</h1>
 
+<a href="https://www.youtube.com/watch?v=V2AS7MwObp4">
+  <img src="https://play-lh.googleusercontent.com/Y5KL71adt-8xXSo6shZzW09fM0gXaYT2YjEMzd_0Tab9Qk07nW25U_DQPN0H5A4BJ90l=w240-h480-rw" alt="HTML tutorial" style="width:350px;height:350px;">
+</a>
 
-<div id="myPlot" style="width:100%;max-width:1000px"></div>
-
+<div id="myPlot" style="width:100%;max-width:1000px;margin:auto;"></div>
 
 <script>
+  const xArray = ["惡性腫瘤", "心臟疾病", "肺炎", "腦血管疾病", "糖尿病","事故傷害","慢性肝病","敗血症","腎病","慢性下呼吸道疾病","殉情"];
+  const yArray = [172, 80, 47, 42, 31 , 27, 19,16,15,13,145];
+  const layout = {title:"虎尾鎮主要死因105年"};
+  const data = [{labels:xArray, values:yArray, type:"pie"}];
 
-const xArray = ["惡性腫瘤", "心臟疾病", "肺炎", "腦血管疾病", "糖尿病","事故傷害","慢性肝病","敗血症","腎病","慢性下呼吸道疾病","殉情"];
-const yArray = [172, 80, 47, 42, 31 , 27, 19,16,15,13,145];
-
-const layout = {title:"虎尾鎮主要死因105年"};
-
-const data = [{labels:xArray, values:yArray, type:"pie"}];
-
-Plotly.newPlot("myPlot", data, layout);
+  Plotly.newPlot("myPlot", data, layout);
 </script>
-<iframe src="homework.html" height="500" width="800" </iframe>
 
+<iframe src="homework.html" height="500" width="900"></iframe>
+<iframe src="https://www.youtube.com/watch?v=HJZZKCznI0U" height="500" width="900"></iframe>
 
 </body>
 </html>
